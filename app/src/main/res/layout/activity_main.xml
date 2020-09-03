@@ -4,66 +4,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="8dp"
+    android:layout_gravity="bottom"
+    android:background="#00F6F4F4"
     android:gravity="center"
     android:orientation="vertical"
+    android:textAlignment="center"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:autofillHints="add new food"
-        android:gravity="center"
-        android:hint="add new food"
-        android:inputType="text"
-        android:textSize="20sp" />
-
     <Space
         android:layout_width="match_parent"
-        android:layout_height="30dp" />
+        android:layout_height="20dp" />
 
     <ImageView
-        android:id="@+id/image"
+        android:id="@+id/imageView"
         android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_gravity="center"
-        android:src="@drawable/dd_logo" />
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_weight="5"
+        app:srcCompat="@drawable/dd_logo" />
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="30dp" />
+        android:layout_height="20dp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/orderTxt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:text="Available Foods"
+        android:textColor="#090909"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/addTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Your Order"
-        android:textSize="25sp" />
+        android:layout_weight="1"
+        android:background="#00F1EEEE"
+        android:ems="10"
+        android:padding="10dp"
+        android:gravity="center_horizontal"
+        android:hint="Add new food item you like"
+        android:inputType="textPersonName"
+        android:textColorHint="#0C0C0C"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/addBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#00BCD4"
+        android:gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:text="Add Food"
+        android:textColor="#F4F1F1" />
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="30dp" />
 
     <Button
-        android:id="@+id/addFood"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:onClick="addFood"
-        android:text="Add Food"
-        android:textSize="20sp"
-        tools:ignore="OnClick" />
-
-
-    <Button
-        android:id="@+id/decideButton"
+        android:id="@+id/decideBtn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="decideFood"
-        android:text="DECIDE!"
-        android:textSize="20sp"
-        tools:ignore="OnClick" />
-
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#247331"
+        android:gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:text="Decide Food!"
+        android:textAlignment="center"
+        android:textColor="#F1EAEA" />
 </LinearLayout>
